@@ -31,8 +31,8 @@ private:
 	double dubinsLRL(double d,double alpha,double beta);	
 
 private:
-	static const double twopi = 2. * 3.1415926535897932384626433832795;
-	static const double DUBINS_EPS = 1e-6;
-	static const double DUBINS_ZERO = -1e-9;
-	static const double DUBINS_ERR = 1e+100;
+	static constexpr double twopi = 2. * 3.1415926535897932384626433832795;
+	static constexpr double DUBINS_EPS = 1e-6;
+	static constexpr double DUBINS_ZERO = -1e-9;
+	static constexpr double DUBINS_ERR = 1e+100;
 };
