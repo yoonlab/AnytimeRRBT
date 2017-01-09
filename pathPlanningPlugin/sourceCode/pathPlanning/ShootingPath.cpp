@@ -53,6 +53,11 @@ CShootingPath::CShootingPath()
 
 CShootingPath::CShootingPath(double theta1,double _x1, double _y1, double _x2, double _y2)
 {
+	pi = 3.1415926535897932384626433832795;
+	twopi = 2. * 3.1415926535897932384626433832795;
+	SHOOTING_ZERO = -1e-9;
+	min_r = 0;
+	max_r = 1e+5;
 	int try_cnt = 100;
 	double theta;
 	double _min_r=min_r,_max_r=max_r;
