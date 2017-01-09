@@ -1,6 +1,7 @@
 
 #pragma once
 
+
 class CDubinPath
 {
 public:
@@ -31,8 +32,8 @@ private:
 	double dubinsLRL(double d,double alpha,double beta);	
 
 private:
-	static constexpr double twopi = 2. * 3.1415926535897932384626433832795;
-	static constexpr double DUBINS_EPS = 1e-6;
-	static constexpr double DUBINS_ZERO = -1e-9;
-	static constexpr double DUBINS_ERR = 1e+100;
+	static double twopi;
+	static double DUBINS_EPS;
+	static double DUBINS_ZERO;
+	static double DUBINS_ERR;
 };

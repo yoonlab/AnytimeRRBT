@@ -45,6 +45,10 @@
 
 CDubinPath::CDubinPath()
 {
+twopi = 2. * 3.1415926535897932384626433832795;
+DUBINS_EPS = 1e-6;
+DUBINS_ZERO = -1e-9;
+DUBINS_ERR = 1e+100;
 }
 
 CDubinPath::CDubinPath(double x1,double y1,double t1,double x2,double y2,double t2)

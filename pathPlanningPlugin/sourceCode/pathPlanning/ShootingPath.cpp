@@ -43,7 +43,11 @@
 
 CShootingPath::CShootingPath()
 {
-	
+	pi = 3.1415926535897932384626433832795;
+	twopi = 2. * 3.1415926535897932384626433832795;
+	SHOOTING_ZERO = -1e-9;
+	min_r = 0;
+	max_r = 1e+5;
 }
 
 
@@ -58,7 +62,7 @@ CShootingPath::CShootingPath(double theta1,double _x1, double _y1, double _x2, d
 	y2 = _y2;
 	double theta2 = atan2(y2-y1,x2-x1);
 	double dist = sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
-	//3»çºÐ¸é -> 2»çºÐ¸éÀ¸·Î ÀÌµ¿  //4»çºÐ¸é -> 1»çºÐ¸éÀ¸·Î ÀÌµ¿
+	//3\BB\E7\BAÐ¸\E9 -> 2\BB\E7\BAÐ¸\E9\C0\B8\B7\CE \C0Ìµ\BF  //4\BB\E7\BAÐ¸\E9 -> 1\BB\E7\BAÐ¸\E9\C0\B8\B7\CE \C0Ìµ\BF
 	if(fmod(twopi + theta2 - theta1 + pi/2,twopi) > pi)
 	{
 		double theta = -fmod(twopi + theta2 - theta1 + pi/2,twopi);
@@ -69,8 +73,8 @@ CShootingPath::CShootingPath(double theta1,double _x1, double _y1, double _x2, d
 		theta2 = atan2(y2-y1,x2-x1);
 		//printf("to %f\t%f\n",x2,y2);
 	}
-	//Min radiusº¸´Ù ÀÛÀ¸¸é
-	if(fmod(twopi + theta2 - theta1 + pi/2,twopi) > pi/2)//2»çºÐ¸é
+	//Min radius\BA\B8\B4\D9 \C0\DB\C0\B8\B8\E9
+	if(fmod(twopi + theta2 - theta1 + pi/2,twopi) > pi/2)//2\BB\E7\BAÐ¸\E9
 	{
 		coor = 2;
 		x0 = x1 - r * sin(theta1);

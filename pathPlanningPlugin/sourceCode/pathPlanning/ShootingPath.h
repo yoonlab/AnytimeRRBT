@@ -20,9 +20,9 @@ public:
 	static double mod2pi(double x);
 	
 private:
-	static constexpr double pi = 3.1415926535897932384626433832795;
-	static constexpr double twopi = 2. * 3.1415926535897932384626433832795;
-	static constexpr double SHOOTING_ZERO = -1e-9;
-	static constexpr double min_r = 0;
-	static constexpr double max_r = 1e+5;
+	static double pi;
+	static double twopi;
+	static double SHOOTING_ZERO;
+	static double min_r;
+	static double max_r;
 };
